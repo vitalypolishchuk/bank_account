@@ -293,6 +293,7 @@ transferBtn.addEventListener("click", () => {
         myAcc.movements.push(-Number(transferAmount.value));
         myAcc.dates.push(`${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`);
         accounts[accIndex].movements.push(Number(transferAmount.value));
+        accounts[accIndex].dates.push(`${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`);
         displayAccountPage(myAcc);
         countMovements;
         setTimeout(() => alert("Transition is successful"), 600);
