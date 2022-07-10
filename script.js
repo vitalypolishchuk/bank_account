@@ -183,6 +183,8 @@ loginBtn.addEventListener("click", () => {
       indexTrans = -1;
       displayAccountPage(accounts[accIndex], userNickname.value);
     }
+  } else {
+    alert("Invalid input! PIN should be a number!");
   }
 });
 
