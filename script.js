@@ -78,7 +78,7 @@ const account1 = {
 const account2 = {
   owner: "py",
   movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
-  dates: [],
+  dates: ["1/7/2022", "2/7/2022", "3/7/2022", "4/7/2022", "5/7/2022", "6/7/2022", "8/7/2022", "9/7/2022"],
   interestRate: 1.5,
   loan: 0,
   currencyType: "USD",
