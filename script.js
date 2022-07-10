@@ -142,7 +142,9 @@ function accExists(name, pin) {
   }
 }
 function registerNewAcc() {
-  if (openAccName.value !== "" && isNum(openAccPin.value)) {
+  if (openAccName.value !== "" && openAccPin.value !== "" && isNum(openAccPin.value)) {
+    console.log(openAccPin.value);
+    console.log(isNum(openAccPin.value));
     // Check if new acc already exists
     let accIndex = accExists(openAccName.value);
     if (!accIndex) {
