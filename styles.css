@@ -147,7 +147,10 @@ Header
     width: 95%;
   }
 }
-
+.github-logo {
+  font-size: 3rem;
+  color: black;
+}
 /* 
 ===================
 Open Account
