@@ -167,6 +167,8 @@ function registerNewAcc() {
       // if account exists, we arert the user
       alert("Given account already exists!");
     }
+  } else {
+    alert("Invalid input! PIN should be a number!");
   }
 }
 //===============================
