@@ -387,6 +387,18 @@ Account Manipulations
     width: 56%;
   }
 }
+@media screen and (min-width: 1116px) {
+  .acc-manipulation-field-text {
+    width: 100%;
+  }
+  .acc-manipulation-field-number {
+    width: 120px;
+  }
+  .text-center {
+    margin-left: 1.5rem;
+    width: 63%;
+  }
+}
 .loan-amount-text {
   margin-left: 1.5rem;
   font-size: 0.9rem;
