@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+===================
+Variables
+===================
+*/
+:root {
+  --backgroundColor: #f3f3f3;
+  --transition: all 0.3s linear;
+  --spacing-small: 1px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--backgroundColor);
+  position: relative;
+}
+h1 {
+  font-size: 2.7rem;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 1.7rem;
+}
+h4 {
+  font-size: 1.3rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.7rem;
+}
+p {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 2.7rem;
+  }
+  h3 {
+    font-size: 2.1rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+  h2 {
+    font-size: 2.9rem;
+  }
+  h3 {
+    font-size: 2.3rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+}
+img {
+  width: 100%;
+}
+.fill-form {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.7rem 0;
+  text-align: center;
+  outline: none;
+}
+.fill-form::placeholder {
+  color: grey;
+  opacity: 0.5;
+  text-align: center;
+}
+.btn {
+  background: white;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+}
+.--hide {
+  display: none;
+}
+/* 
+===================
+Header
+===================
+*/
+.header-center {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-login-msg {
+  letter-spacing: var(--font-spacing);
+  padding: 1rem 0;
+}
+.login-arrow {
+  font-size: 1.5rem;
+}
+.logo-container {
+  height: 50px;
+  display: none;
+}
+.logo-container img {
+  height: 100%;
+  object-fit: cover;
+}
+.login-arrow {
+  background: none;
+  border: none;
+}
+@media screen and (min-width: 600px) {
+  .logo-container {
+    display: inline-block;
+  }
+  .header-center {
+    padding-top: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+  }
+}
+
+/* 
+===================
+Open Account
+===================
+*/
+.open-acc {
+  position: absolute;
+  background: white;
+  border-radius: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5rem;
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+.full-name-pin {
+  grid: 1fr 1fr;
+}
+.open-acc-name,
+.open-acc-pin {
+  border: 1px solid black;
+  margin: 1rem 0;
+}
+.open-acc-header {
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  padding-bottom: 1rem;
+}
+.open-acc-currency-intrate {
+  padding: 2rem 0;
+}
+.open-acc-currency-intrate p {
+  display: inline-block;
+}
+.currency,
+.interest-rate {
+  border: none;
+  font-size: 1.1rem;
+}
+.sign-up {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 486px) {
+  .open-acc-name,
+  .open-acc-pin {
+    margin: 2rem 0;
+  }
+}
+/* 
+===================
+Account Page
+===================
+*/
+.account-page {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 3rem;
+}
+.current-balance {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.current-balance-msg {
+  letter-spacing: var(--spacing-small);
+  font-weight: 400;
+}
+.date-time {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.current-balance-amount {
+  align-self: center;
+  font-weight: 400;
+  opacity: 0.7;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .current-balance-amount {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .current-balance-amount {
+    font-size: 3rem;
+  }
+}
+
+/* 
+===================
+Account History
+===================
+*/
+.account-history {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  height: 500px;
+  margin: 2rem auto;
+  overflow-y: scroll;
+}
+.account-history-trans {
+  height: 60px;
+  align-items: center;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.5);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.deposit-num,
+.withdrawal-num {
+  color: white;
+  font-weight: bold;
+  font-size: 0.7rem;
+  background: linear-gradient(to top left, #39b385, #9be15d);
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.3rem 0.6rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  display: inline-block;
+}
+.deposit-num {
+  background: linear-gradient(to top left, #39b385, #9be15d);
+}
+.withdrawal-num {
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+.transaction-day {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+.transaction-amount {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin-right: 1rem;
+  justify-self: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .transaction-amount {
+    margin-right: 2rem;
+  }
+}
+/* 
+===================
+Account Manipulations
+===================
+*/
+.manipulation-containers {
+  margin: 2rem auto;
+  height: 150px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.transfer-money-container {
+  background: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+.request-loan-container {
+  background: linear-gradient(to top left, #39b385, #9be15d);
+}
+.pay-loan-container {
+  background: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+.manipulation-container-center {
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.manipulation-container-center h6 {
+  margin-bottom: 1rem;
+}
+.manipultaion-area-center {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+}
+.acc-manipulation-field-text {
+  border: none;
+  opacity: 0.5;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.acc-manipulation-field-number {
+  border: none;
+  opacity: 0.5;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  width: 120px;
+  text-align: center;
+}
+.manipulation-arrow-btn {
+  border: none;
+  background: white;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  padding: 0.1rem 0.7rem;
+}
+.transfer-to,
+.transfer-to-amount {
+  display: inline-block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.text-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 58%;
+  margin-left: 1.7rem;
+  margin-top: 0.5rem;
+}
+.loan-amount-text {
+  margin-left: 2rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 1116px) {
+  .account-main-part {
+    display: grid;
+    grid-template-columns: 600px 400px;
+    justify-content: space-between;
+  }
+  .manipulation-containers {
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .account-history {
+    margin: 2rem 0;
+  }
+}
+/* 
+===================
+Footer
+===================
+*/
+.footer {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.footer-center {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-msg {
+  font-size: 0.6rem;
+  font-weight: bold;
+  opacity: 0.7;
+}
+.inflow,
+.outflow,
+.current-loan {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.inflow {
+  color: green;
+}
+.outflow {
+  color: red;
+}
+.current-loan {
+  color: rgb(0, 75, 205);
+}
+@media screen and (min-width: 764px) {
+  .inflow,
+  .outflow,
+  .current-loan {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1116px) {
+  .footer {
+    margin-left: 0;
+    max-width: 525px;
+  }
+}
+/* 
+===================
+Loading
+===================
+*/
+.loading {
+  position: fixed;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 8vmax;
+  height: 8vmax;
+  border-right: 4px solid #c5c5c5;
+  border-radius: 100%;
+  animation: spinRight 800ms linear infinite;
+}
+
+.loading::before,
+.loading::after {
+  content: "";
+  width: 6vmax;
+  height: 6vmax;
+  display: block;
+  position: absolute;
+  top: calc(50% - 3vmax);
+  left: calc(50% - 3vmax);
+  border-left: 3px solid #c5c5c5;
+  border-radius: 100%;
+  animation: spinLeft 800ms linear infinite;
+}
+
+.loading::after {
+  width: 4vmax;
+  height: 4vmax;
+  top: calc(50% - 2vmax);
+  left: calc(50% - 2vmax);
+  border: 0;
+  border-right: 2px solid #c5c5c5;
+  animation: none;
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes spinRight {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
