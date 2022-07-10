@@ -349,14 +349,16 @@ Account Manipulations
   padding: 0.5rem 0;
   border-radius: 0.5rem;
   text-align: center;
+  width: 70%;
 }
 .acc-manipulation-field-number {
   border: none;
   opacity: 0.5;
   padding: 0.5rem 0;
   border-radius: 0.5rem;
-  width: 120px;
+  width: 110px;
   text-align: center;
+  width: 60%;
 }
 .manipulation-arrow-btn {
   border: none;
@@ -375,12 +377,18 @@ Account Manipulations
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 58%;
-  margin-left: 1.7rem;
+  width: 63%;
+  margin-left: 0.3rem;
   margin-top: 0.5rem;
 }
+@media screen and (min-width: 500px) {
+  .text-center {
+    margin-left: 0.5rem;
+    width: 56%;
+  }
+}
 .loan-amount-text {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   font-size: 0.9rem;
   margin-top: 0.5rem;
 }
